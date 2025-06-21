@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alien AI Assistant</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/scripts.js" defer></script>
+</head>
+<body>
+    <div class="starry-background">
+        <div class="alien-container">
+            <div class="alien-orb">
+                <div class="alien-title">
+                    <h1>Alien AI Assistant</h1>
+                    <p>Communicate with cosmic intelligence</p>
+                </div>
+                <div class="alien-form">
+                    <form id="upload-form">
+                        <h2>Upload Galactic File</h2>
+                        <input type="file" id="file" name="file" accept=".pdf" required>
+                        <button type="submit" class="neon-button">Upload</button>
+                    </form>
+                    <form id="ask-form">
+                        <h2>Ask a Question</h2>
+                        <input type="text" id="question" name="question" placeholder="Ask the stars..." required>
+                        <button type="submit" class="neon-button">Get Answer</button>
+                    </form>
+                    <div id="response-container">
+                        <h3>Cosmic Answer:</h3>
+                        <p id="response">Awaiting your question...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+/* Starry Background */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    color: #00ffcc;
+}
+
+.starry-background {
+    background: radial-gradient(circle, #000000 60%, #050505);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+/* Animated Stars */
+.starry-background::before, .starry-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: transparent;
+    background-image: radial-gradient(#fff, transparent 50%);
+    background-size: 5px 5px;
+    animation: move-stars 20s linear infinite;
+}
+
+.starry-background::after {
+    animation: move-stars 30s linear infinite reverse;
+}
+
+@keyframes move-stars {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-50%);
+    }
+}
+
+/* Alien Orb */
+.alien-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+
+.alien-orb {
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+    border-radius: 50%;
+    box-shadow: 0 0 30px #00ffcc, inset 0 0 50px #00ffcc;
+    position: relative;
+    animation: rotate-orb 10s infinite linear;
+}
+
+@keyframes rotate-orb {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Alien Title */
+.alien-title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.alien-title h1 {
+    font-size: 24px;
+    color: #00ffcc;
+    text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
+}
+
+.alien-title p {
+    font-size: 14px;
+    color: #00ffcc;
+    margin-top: 10px;
+    text-shadow: 0 0 10px #00ffcc;
+}
+
+/* Forms */
+.alien-form {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.alien-form h2 {
+    color: #00ffcc;
+    font-size: 18px;
+    text-shadow: 0 0 10px #00ffcc;
+}
+
+input[type="file"], input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #00ffcc;
+    border-radius: 5px;
+    color: #00ffcc;
+    outline: none;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 0 15px #00ffcc;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+input::placeholder {
+    color: #00ffcc;
+}
+
+input:hover, input:focus {
+    box-shadow: 0 0 30px #00ffcc;
+}
+
+/* Neon Button */
+.neon-button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #000;
+    background: #00ffcc;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 0 15px #00ffcc;
+    transition: box-shadow 0.3s ease-in-out, transform 0.2s;
+}
+
+.neon-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px #00ffcc, 0 0 60px #00ffcc;
+}
+
+/* Response Section */
+#response-container {
+    margin-top: 20px;
+    padding: 10px;
+    border: 2px solid #00ffcc;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #00ffcc;
+}
+
+#response {
+    font-size: 16px;
+    color: #ffffff;
+    text-shadow: 0 0 10px #00ffcc;
+}
