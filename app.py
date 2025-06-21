@@ -15,7 +15,7 @@ os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 cache = Cache(app)
 
 # Configure Generative AI API
-genai.configure(api_key="AIzaSyDvjQzvRZ8rx9_2Gt-EUMP6YiFbM6VvfJA")  # Replace with your actual API key
+genai.configure(api_key="GEMINI API KEY")  # Replace with your actual API key
 model = genai.GenerativeModel("gemini-1.5-flash")
 
 # Extract text from the PDF
